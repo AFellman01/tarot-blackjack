@@ -2,7 +2,10 @@ box-sizing: border-box;
 }
 
 body {
-background: #4a8c3f auto;
+background: #4a8c3f;
+width: auto;
+height:auto;
+margin:auto;
 }
 
 .container {
