@@ -1,0 +1,93 @@
+box-sizing: border-box;
+}
+
+body {
+background: #4a8c3f auto;
+}
+
+.container {
+width: 1300px;
+background: #4a8c3f;
+}
+
+#heading {
+background: #4a8c3f;
+color: black;
+border: 1px solid #4a8c3f;
+width: 100%;
+margin: 0;
+padding: 40px;
+text-align: center;
+font-size: 60px;
+
+}
+
+#gameRules {
+background: ##d3682a;
+color: black
+padding: 50px;
+text-align: center;
+font-size: 25px;
+
+}
+
+#randomNum {
+background-color: #4a8c3f
+color: black;
+width: 33%;
+margin-top: 0;
+padding: 0, 20px, 20px, 20px;
+text-align: center;
+font-size: 25px;
+float: left;
+height: 90px;
+
+
+}
+
+#winsLosses {
+background-color: #4a8c3f
+color: black;
+width: 33%;
+margin-top: 0;
+padding: 0, 20px, 20px, 20px;
+text-align: center;
+font-size: 25px;
+float: left;
+line-height: 20px;
+height: 90px;
+
+}
+
+#totalScore {
+background: black;
+color: white;
+width: 33%;
+margin-top: 0;
+padding: 0, 20px, 20px, 20px;
+text-align: center;
+font-size: 25px;
+float: left;
+height: 90px;
+
+}
+
+.cards {
+background: #4a8c3f;
+color: white;
+width: 100%;
+margin: 0;
+text-align: center;
+float: left;
+padding-top: 50px;
+position: fixed;
+bottom: 0;
+clear: both;
+}
+
+img {
+height: 300px;
+width: 275px;
+margin: 0 auto;
+padding-right: 50px;
+}

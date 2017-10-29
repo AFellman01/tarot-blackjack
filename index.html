@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Blackjack</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+  <div id = "wrapper">
+
+  </head>
+  <body>
+  	<div class="container">
+  		<header>
+  			<h1 id="heading"> Tarot Blackjack </h1>
+  		</header>
+
+  		<p id="gameRules">
+        It's tarot blackjack!
+  			<br>
+  			There are four cards below. By clicking on a card you will draw from that suit and add its value to your score.
+  			<br>
+  			You win the game by hitting 21. You lose if you go over 21.
+  			<br>
+  			The value of each card is hidden from you until you draw it.
+  			<br>
+  			Each time when the game starts, the game will reshuffle your cards.
+  		</p>
+
+  		<div id="winsLosses">
+  			<h3><span id="message"></span></h3>
+  			<h3> Wins: <span id="win"></span></h3>
+  			<h3> Losses: <span id="loss"></span></h3>
+  		</div>
+
+  		<div id="randomNum"> 21 <span class="value"></span></div>
+
+  		<div class="cards"></div>
+
+  		<div id="totalScore">
+  			<h3 id="score"> Your total score is: <span id="yourScore">0</span></h3>
+  		</div>
+
+  	</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
