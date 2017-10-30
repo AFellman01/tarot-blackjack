@@ -3,7 +3,7 @@ var globalcounter = 4;
 $(document).ready(function() {
 
 cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg", "assets/images/kow.jpg"]
-
+// TrumpCard = ["assets/images/emp.jpg"]
 	var counter = 0;
 	var wins = 0;
 	var losses = 0;
@@ -13,7 +13,10 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 
 	newCards();
 	newGame();
-
+// function dealerdraw ()
+// var dealernumbers = []
+// 	var dealernumbers = randomIntFromInterval(17,27);
+// for (var i=0;...
 
 	function newCards () {
 		var numbers = []
@@ -37,7 +40,14 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 			$(".cards").append(imageCard);
 		}
 	}
-
+// for (i = 0); i <, i++) {}
+// var TrumpCard = ("<img>");
+// imageCard.attr("data-num"), trump[i]);
+// imageCard.attr("src", TrumpCard[i]);
+// imageCard.attr("alt", "TrumpCard")
+// imageCard.()
+// 		}
+// 	}
 	function newGame() {
     globalcounter = 4;
 		counter = 0;
