@@ -15,7 +15,7 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 	function newCards () {
 		var numbers = []
 			while(numbers.length < 4){
-			  var randomnumber = Math.ceil(Math.random()*10)
+			  var randomnumber = Math.ceil(Math.random()*5)
 			  var found = false;
 			  for (var i=0; i< numbers.length; i++){
 				if (numbers[i] == randomnumber){
@@ -24,7 +24,7 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 			  }
 			  if(!found)numbers[numbers.length]=randomnumber;
 			}
-      
+
 		for (i = 0; i < numbers.length; i++) {
 			var imageCard = $("<img>");
 			imageCard.attr("data-num", numbers[i]);
