@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Blackjack</title>
+	<link href="https://fonts.googleapis.com/css?family=Calligraffitti|IM+Fell+French+Canon" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -19,15 +20,10 @@
   		</header>
 
   		<p id="gameRules">
-        It's tarot blackjack!
-  			<br>
-  			There are four cards below. By clicking on a card you will draw from that suit and add its value to your score.
-  			<br>
-  			You win the game by hitting 21. You lose if you go over 21.
-  			<br>
-  			The value of each card is hidden from you until you draw it.
-  			<br>
-  			Each time when the game starts, the game will reshuffle your cards.
+      It's tarot blackjack! Try to get to 21 without going over. Click each card below to draw from that suit. Remember, you can't know the value of a card until you've drawn it. Bonne Chance!
+</br>
+			To come: Limit draws for player, create House Draw rng.
+
   		</p>
 
   		<div id="winsLosses">
@@ -36,13 +32,13 @@
   			<h3> Losses: <span id="loss"></span></h3>
   		</div>
 
-  		<div id="randomNum"> Remember, this is your target: <span class="value"></span></div>
+  		<div id="randomNum"> Aim for <span class="value"></span></div>
+
+			<div id="totalScore">
+				<h3 id="score"> Current Hand: <span id="yourScore">0</span></h3>
+			</div>
 
   		<div class="cards"></div>
-
-  		<div id="totalScore">
-  			<h3 id="score"> Your total score is: <span id="yourScore">0</span></h3>
-  		</div>
 
   	</div>
 
