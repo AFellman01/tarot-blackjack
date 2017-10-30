@@ -1,3 +1,5 @@
+var globalcounter = 4;
+
 $(document).ready(function() {
 
 cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg", "assets/images/kow.jpg"]
@@ -6,16 +8,17 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 	var wins = 0;
 	var losses = 0;
 	$("#win").text(wins);
-	$("#loss").text(losses);
+	$("#loss").text(losses)
 
 
 	newCards();
 	newGame();
 
+
 	function newCards () {
 		var numbers = []
 			while(numbers.length < 4){
-			  var randomnumber = Math.ceil(Math.random()*5)
+			  var randomnumber = Math.ceil(Math.random()*10)
 			  var found = false;
 			  for (var i=0; i< numbers.length; i++){
 				if (numbers[i] == randomnumber){
@@ -36,7 +39,7 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 	}
 
 	function newGame() {
-
+    globalcounter = 4;
 		counter = 0;
 		$("#yourScore").text(counter);
 
@@ -49,30 +52,38 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 		$(".value").text(numberToGuess);
 
 
+
 		$(".cardImage").on('click', function(){
 		    counter = counter + parseInt($(this).data('num'));
-
+        globalcounter--;
 		    $("#yourScore").text(counter);
 
-		    if (counter == numberToGuess){
-		      $("#message").text("You won!");
+		    if (counter === numberToGuess ){
+		      $("#message").text("Jackpot!");
 		      wins ++;
 		      $("#win").text(wins);
-		      console.log(wins)
 		      $(".cards").empty();
 		      newCards();
 		      newGame();
+				}
+				else if (counter < numberToGuess && globalcounter === 0){
+					$("message").text("You Win!")
+					wins ++;
+					$("#win").text(wins);
+          $(".cards").empty();
+		      newCards();
+		      newGame()
 
-		    } else if ( counter > numberToGuess){
+		    } else if ( counter > numberToGuess || globalcounter === 0){
 		        $("#message").text("House wins")
 		        losses ++;
 		        $("#loss").text(losses);
-		        console.log(losses)
 		        $(".cards").empty();
 		        newCards();
 		        newGame();
 		    }
 		});
 	}
+
 
 });

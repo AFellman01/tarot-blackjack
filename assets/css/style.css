@@ -92,6 +92,11 @@ padding-top: 0px;
 bottom: 0;
 }
 
+.message {
+background: #086643;
+color: white
+}
+
 img {
 height: 300px;
 width: 275px;
