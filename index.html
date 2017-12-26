@@ -22,8 +22,6 @@
   		<p id="gameRules">
       It's tarot blackjack! Try to get to 21 without going over. Click each card below to draw from that suit. Remember, you can't know the value of a card until you've drawn it. You have four draws, one for each suit. Bonne Chance!
 </br>
-			To come: House Draw RNG. Report on what card you've drawn. 
-
   		</p>
 
   		<div id="winsLosses">
@@ -32,15 +30,17 @@
   			<h3> Losses: <span id="loss"></span></h3>
   		</div>
 
-  		<div id="randomNum"> Aim for <span class="value"></span></div>
-
+<div class="gamble">
+  		<div id="randomNum"> Aim for <span class="value"></span>
+				The House has drawn <span class="dealerValue"></span></div>
 			<div id="totalScore">
 				<h3 id="score"> Current Hand: <span id="yourScore">0</span></h3>
 			</div>
+		</br>
+	</div>
+</br>
+<div class="cards"></div>
 
-  		<div class="cards"></div>
-
-  	</div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>

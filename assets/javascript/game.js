@@ -13,10 +13,7 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 
 	newCards();
 	newGame();
-// function dealerdraw ()
-// var dealernumbers = []
-// 	var dealernumbers = randomIntFromInterval(17,27);
-// for (var i=0;...
+
 
 	function newCards () {
 		var numbers = []
@@ -40,14 +37,7 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 			$(".cards").append(imageCard);
 		}
 	}
-// for (i = 0); i <, i++) {}
-// var TrumpCard = ("<img>");
-// imageCard.attr("data-num"), trump[i]);
-// imageCard.attr("src", TrumpCard[i]);
-// imageCard.attr("alt", "TrumpCard")
-// imageCard.()
-// 		}
-// 	}
+
 	function newGame() {
     globalcounter = 4;
 		counter = 0;
@@ -57,9 +47,12 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 		   	return Math.floor(Math.random()*(max-min+1)+min);
 			}
 
-		var numberToGuess = randomIntFromInterval(21,21);
+    var dealerDraw = randomIntFromInterval(16, 20)
+		var blackJack = randomIntFromInterval(21,21);
 
-		$(".value").text(numberToGuess);
+		$(".value").text(blackJack);
+
+		$(".dealerHand".text(dealerDraw);
 
 
 
@@ -68,15 +61,15 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
         globalcounter--;
 		    $("#yourScore").text(counter);
 
-		    if (counter === numberToGuess ){
-		      $("#message").text("Jackpot!");
+		    if (counter === blackJack && (counter > dealerValue)){
+		      $("#message").text("Blackjack!");
 		      wins ++;
 		      $("#win").text(wins);
 		      $(".cards").empty();
 		      newCards();
 		      newGame();
 				}
-				else if (counter < numberToGuess && globalcounter === 0){
+				else if (counter < blackJack && globalcounter === 0 && (counter > dealerDraw)){
 					$("message").text("You Win!")
 					wins ++;
 					$("#win").text(wins);
@@ -84,14 +77,18 @@ cards =["assets/images/koc.jpg", "assets/images/kos.jpg", "assets/images/kop.jpg
 		      newCards();
 		      newGame()
 
-		    } else if ( counter > numberToGuess || globalcounter === 0){
-		        $("#message").text("House wins")
+		    } else if ( counter > blackJack || globalcounter === 0 || dealerDraw < blackJack){
+		        $("#message").text("House wins!")
 		        losses ++;
 		        $("#loss").text(losses);
 		        $(".cards").empty();
 		        newCards();
 		        newGame();
-		    }
+		    } else if (dealerDraw > blackJack || globalcounter === 0 || counter > blackjack)
+				$("message").text("Bust!")
+				$(".cards").empty();
+				newCards();
+				newGame();
 		});
 	}
 
